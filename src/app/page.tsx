@@ -4,9 +4,6 @@ import { Suspense } from "react";
 import StreamingLoader from "@/components/general/StreamingLoader";
 
 const getData = async () => {
-  await new Promise((reslove) => {
-    setTimeout(reslove, 2000);
-  });
   const data = await prisma.blogPost.findMany({
     select: {
       title: true,
