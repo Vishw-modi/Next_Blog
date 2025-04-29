@@ -29,13 +29,11 @@ const Navbar = async () => {
               DashBoard
             </Link>
           ) : (
-            <SignInButton
-              mode="modal"
-              className="text-sm font-medium hover:text-blue-500 transition-colors"
-              forceRedirectUrl="/dashboard"
-            >
-              DashBoard
-            </SignInButton>
+            <Button variant={"default"}>
+              <SignInButton mode="modal" forceRedirectUrl="/dashboard">
+                DashBoard
+              </SignInButton>
+            </Button>
           )}
         </div>
       </div>
