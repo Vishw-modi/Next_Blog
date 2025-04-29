@@ -6,6 +6,11 @@ import { prisma } from "./utils/db";
 
 export async function postData(formData: FormData) {
     const user = await currentUser()
+
+    if(!user) {
+        return redirect("/")
+    }
+
     const title = formData.get("title")
     const content = formData.get("content")
     const url = formData.get("url")

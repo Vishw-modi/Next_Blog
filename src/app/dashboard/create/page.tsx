@@ -1,6 +1,5 @@
-"use client";
 import { postData } from "@/app/action";
-import { Button } from "@/components/ui/button";
+import { SubmitButton } from "@/components/general/SubmitButton";
 import {
   Card,
   CardContent,
@@ -34,7 +33,7 @@ const page = () => {
             <Label>Image Url</Label>
             <Input name="url" required type="url" placeholder="Image Url" />
           </div>
-          <Button>Create Post</Button>
+          <SubmitButton />
         </form>
       </CardContent>
     </Card>
